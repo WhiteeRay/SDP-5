@@ -1,7 +1,7 @@
-package example.com.decorators;
+package main.java.example.com.decorators;
 
 
-import example.com.Course;
+import main.java.example.com.Course;
 
 public class CertificateDecorator extends Decorator {
     public CertificateDecorator(Course decoratedCourse) {

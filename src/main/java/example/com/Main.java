@@ -1,6 +1,6 @@
-package example.com;
+package main.java.example.com;
 
-import example.com.demo.LMSDemo;
+import main.java.example.com.demo.LMSDemo;
 
 public class Main {
     public static void main(String[] args){

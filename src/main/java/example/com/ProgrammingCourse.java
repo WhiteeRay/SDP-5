@@ -1,4 +1,4 @@
-package example.com;
+package main.java.example.com;
 
 public class ProgrammingCourse implements Course {
     @Override

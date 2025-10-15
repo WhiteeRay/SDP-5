@@ -1,6 +1,6 @@
-package example.com.facade;
+package main.java.example.com.facade;
 
-import example.com.Course;
+import main.java.example.com.Course;
 
 import java.util.HashMap;
 import java.util.Map;
