@@ -8,4 +8,8 @@ public class ProgrammingCourse implements Course {
     public String deliverContent() {
         return "Learning Java programming concepts.";
     }
+    @Override
+    public String getFeatures() {
+        return "No extra features";
+    }
 }

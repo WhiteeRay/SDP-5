@@ -1,12 +1,13 @@
 package example.com.controller;
 
+
+import example.com.facade.StudentPortalFacade;
 import example.com.Course;
 import example.com.MathCourse;
 import example.com.ProgrammingCourse;
 import example.com.decorators.CertificateDecorator;
 import example.com.decorators.GamificationDecorator;
 import example.com.decorators.MentorSupportDecorator;
-import example.com.facade.StudentPortalFacade;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,7 +25,6 @@ public class LmsController {
                                @RequestParam(required = false) String decorators) {
 
         Course selectedCourse;
-
         switch (course.toLowerCase()) {
             case "math" -> selectedCourse = new MathCourse();
             case "programming" -> selectedCourse = new ProgrammingCourse();
@@ -46,21 +46,21 @@ public class LmsController {
             }
         }
 
-        portal.enrollInCourse(course, selectedCourse);
-        return "Enrolled in " + course + " with " +
-                (decorators != null ? decorators : "no extra features") + ".";
+        return portal.enrollInCourse(course, selectedCourse);
     }
 
     @GetMapping("/start")
     public String startCourse(@RequestParam String course) {
-        portal.startLearning(course);
-        return "Started course: " + course;
+        return portal.startLearning(course);
     }
-
 
     @GetMapping("/complete")
     public String completeCourse(@RequestParam String course) {
-        portal.completeCourse(course);
-        return "Completed course: " + course;
+        return portal.completeCourse(course);
+    }
+
+    @GetMapping("/status")
+    public String getStatus(@RequestParam String course) {
+        return portal.getStatus(course);
     }
 }

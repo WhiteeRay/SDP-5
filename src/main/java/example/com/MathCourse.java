@@ -8,4 +8,9 @@ public class MathCourse implements Course {
     public String deliverContent() {
         return "Learning Math fundamentals.";
     }
+
+    @Override
+    public String getFeatures() {
+        return "No extra features";
+    }
 }
