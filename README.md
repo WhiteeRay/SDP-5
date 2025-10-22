@@ -1,6 +1,6 @@
-# 🎓 Online Education Platform (LMS)
+#  Online Education Platform (LMS)
 
-## 🧩 Overview
+##  Overview
 This project is a **Spring Boot** application that simulates an **Online Learning Management System (LMS)**.  
 It demonstrates two key **Design Patterns**:
 - **Decorator Pattern** — for adding dynamic features to courses.
@@ -10,9 +10,9 @@ Students can enroll in different types of courses and enhance them with addition
 
 ---
 
-## 🧠 Design Patterns
+##  Design Patterns
 
-### 🧱 1. Decorator Pattern — Course Features
+###  1. Decorator Pattern — Course Features
 The **Decorator Pattern** allows adding new behaviors to existing courses at runtime without altering their structure.
 
 **Structure:**
@@ -26,8 +26,8 @@ The **Decorator Pattern** allows adding new behaviors to existing courses at run
     - `GamificationDecorator` → adds points & leaderboard
 
 
-🎛2. Facade Pattern — StudentPortalFacade
-The Facade Pattern provides a simple interface for students to interact with the system.
+## 2. Facade Pattern — StudentPortalFacade
+# The Facade Pattern provides a simple interface for students to interact with the system.
 
 Responsibilities:
 
@@ -43,11 +43,10 @@ Methods:
 
 
 
-🖥️ API Endpoints
+##  API Endpoints
 ````
 Method	Endpoint	Description
 POST	/api/enroll	Enroll in a new course
 POST	/api/start	Start learning a course
 POST	/api/complete	Complete a course
-GET	/api/demo	Run the sample demo journey
-```
+````
