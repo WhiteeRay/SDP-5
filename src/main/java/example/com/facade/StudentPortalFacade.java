@@ -13,16 +13,16 @@ public class StudentPortalFacade {
 
     public void enrollInCourse(String name, Course course) {
         enrolledCourses.put(name, course);
-        System.out.println("✅ Enrolled in " + name);
+        System.out.println("Enrolled in " + name);
     }
 
     public void startLearning(String name) {
         Course course = enrolledCourses.get(name);
         if (course != null) {
-            System.out.println("🚀 Starting: " + name);
+            System.out.println("Starting: " + name);
             System.out.println(course.deliverContent());
         } else {
-            System.out.println("⚠️ Course not found!");
+            System.out.println("Course not found!");
         }
     }
 

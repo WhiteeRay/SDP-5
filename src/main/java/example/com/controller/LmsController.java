@@ -19,8 +19,6 @@ public class LmsController {
         this.portal = portal;
     }
 
-    // 🟢 Enroll in a course with decorators
-    // Example: /lms/enroll?course=Math&decorators=mentor,certificate
     @GetMapping("/enroll")
     public String enrollCourse(@RequestParam String course,
                                @RequestParam(required = false) String decorators) {
@@ -31,11 +29,10 @@ public class LmsController {
             case "math" -> selectedCourse = new MathCourse();
             case "programming" -> selectedCourse = new ProgrammingCourse();
             default -> {
-                return "❌ Unknown course: " + course;
+                return "Unknown course: " + course;
             }
         }
 
-        // Apply decorators dynamically
         if (decorators != null) {
             for (String decorator : decorators.split(",")) {
                 switch (decorator.trim().toLowerCase()) {
@@ -43,30 +40,27 @@ public class LmsController {
                     case "certificate" -> selectedCourse = new CertificateDecorator(selectedCourse);
                     case "gamification" -> selectedCourse = new GamificationDecorator(selectedCourse);
                     default -> {
-                        return "❌ Unknown decorator: " + decorator;
+                        return "Unknown decorator: " + decorator;
                     }
                 }
             }
         }
 
         portal.enrollInCourse(course, selectedCourse);
-        return "✅ Enrolled in " + course + " with " +
+        return "Enrolled in " + course + " with " +
                 (decorators != null ? decorators : "no extra features") + ".";
     }
 
-    // 🚀 Start learning
-    // Example: /lms/start?course=Math
     @GetMapping("/start")
     public String startCourse(@RequestParam String course) {
         portal.startLearning(course);
-        return "🚀 Started course: " + course;
+        return "Started course: " + course;
     }
 
-    // 🏁 Complete course
-    // Example: /lms/complete?course=Programming
+
     @GetMapping("/complete")
     public String completeCourse(@RequestParam String course) {
         portal.completeCourse(course);
-        return "🎉 Completed course: " + course;
+        return "Completed course: " + course;
     }
 }
