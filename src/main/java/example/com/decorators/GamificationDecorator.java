@@ -1,20 +1,14 @@
-package main.java.example.com.decorators;
+package example.com.decorators;
 
-import main.java.example.com.Course;
+import example.com.Course;
 
-
-public class GamificationDecorator extends Decorator {
-    public GamificationDecorator(Course decoratedCourse) {
-        super(decoratedCourse);
+public class GamificationDecorator extends CourseDecorator {
+    public GamificationDecorator(Course course) {
+        super(course);
     }
 
     @Override
-    public void deliverContent() {
-        super.deliverContent();
-        addGamification();
-    }
-
-    private void addGamification() {
-        System.out.println("You have unlocked the Gamification Mode!");
+    public String deliverContent() {
+        return super.deliverContent() + " Earn points and climb the leaderboard!";
     }
 }

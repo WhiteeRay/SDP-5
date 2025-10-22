@@ -1,6 +1,5 @@
-package main.java.example.com;
-
+package example.com;
 
 public interface Course {
-    void deliverContent();
+    String deliverContent();
 }

@@ -1,20 +1,14 @@
-package main.java.example.com.decorators;
+package example.com.decorators;
 
-import main.java.example.com.Course;
+import example.com.Course;
 
-
-public class MentorSupportDecorator extends Decorator {
-    public MentorSupportDecorator(Course decoratedCourse) {
-        super(decoratedCourse);
+public class MentorSupportDecorator extends CourseDecorator {
+    public MentorSupportDecorator(Course course) {
+        super(course);
     }
 
     @Override
-    public void deliverContent() {
-        super.deliverContent();
-        addMentorSupport();
-    }
-
-    private void addMentorSupport() {
-        System.out.println("A personal mentor has been assigned to help you through your learning journey!");
+    public String deliverContent() {
+        return super.deliverContent() + " Includes personal mentor support.";
     }
 }

@@ -1,20 +1,14 @@
-package main.java.example.com.decorators;
+package example.com.decorators;
 
+import example.com.Course;
 
-import main.java.example.com.Course;
-
-public class CertificateDecorator extends Decorator {
-    public CertificateDecorator(Course decoratedCourse) {
-        super(decoratedCourse);
+public class CertificateDecorator extends CourseDecorator {
+    public CertificateDecorator(Course course) {
+        super(course);
     }
 
     @Override
-    public void deliverContent() {
-        super.deliverContent();
-        grantCertificate();
-    }
-
-    private void grantCertificate() {
-        System.out.println("Great job! You have earned a certificate for completing this course!");
+    public String deliverContent() {
+        return super.deliverContent() + " Certificate awarded upon completion.";
     }
 }

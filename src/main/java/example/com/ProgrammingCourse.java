@@ -1,8 +1,11 @@
-package main.java.example.com;
+package example.com;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ProgrammingCourse implements Course {
     @Override
-    public void deliverContent() {
-        System.out.println("Welcome to Programming Course!");
+    public String deliverContent() {
+        return "Learning Java programming concepts.";
     }
 }
