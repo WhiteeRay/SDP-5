@@ -1,6 +1,6 @@
-package example.com.decorators;
+package example.com.decorator;
 
-import example.com.Course;
+import example.com.model.course.Course;
 
 public abstract class CourseDecorator implements Course {
     protected Course decoratedCourse;

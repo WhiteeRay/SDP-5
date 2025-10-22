@@ -1,4 +1,4 @@
-package example.com;
+package example.com.model.course;
 
 public interface Course {
     String deliverContent();

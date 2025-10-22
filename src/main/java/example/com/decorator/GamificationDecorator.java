@@ -1,6 +1,6 @@
-package example.com.decorators;
+package example.com.decorator;
 
-import example.com.Course;
+import example.com.model.course.Course;
 
 public class GamificationDecorator extends CourseDecorator{
     private Course course;
@@ -11,7 +11,7 @@ public class GamificationDecorator extends CourseDecorator{
 
     @Override
     public String deliverContent() {
-        return super.deliverContent() + " Earn points and climb the leaderboard!";
+        return super.deliverContent() + " Points & leaderboard added for gamification!";
     }
 
     @Override

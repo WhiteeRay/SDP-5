@@ -1,6 +1,6 @@
-package example.com.decorators;
+package example.com.decorator;
 
-import example.com.Course;
+import example.com.model.course.Course;
 
 public class MentorSupportDecorator extends CourseDecorator {
     private final Course course;
@@ -11,7 +11,7 @@ public class MentorSupportDecorator extends CourseDecorator {
 
     @Override
     public String deliverContent() {
-        return super.deliverContent() + " Includes personal mentor support.";
+        return super.deliverContent() + " Included mentor support.";
     }
     @Override
     public String getFeatures() {

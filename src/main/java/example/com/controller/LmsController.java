@@ -2,12 +2,12 @@ package example.com.controller;
 
 
 import example.com.facade.StudentPortalFacade;
-import example.com.Course;
-import example.com.MathCourse;
-import example.com.ProgrammingCourse;
-import example.com.decorators.CertificateDecorator;
-import example.com.decorators.GamificationDecorator;
-import example.com.decorators.MentorSupportDecorator;
+import example.com.model.course.Course;
+import example.com.model.MathCourse;
+import example.com.model.ProgrammingCourse;
+import example.com.decorator.CertificateDecorator;
+import example.com.decorator.GamificationDecorator;
+import example.com.decorator.MentorSupportDecorator;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
